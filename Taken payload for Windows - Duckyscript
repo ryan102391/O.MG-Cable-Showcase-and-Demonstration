@@ -3,14 +3,10 @@ GUI r
 DELAY 200
 STRING cmd
 ENTER
-DELAY 200
-STRING Add-Type -AssemblyName System.speech
-ENTER
-STRING $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
-ENTER
-STRING $speak.Speak("I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money, but what I do have is a very particular set up skills. Skills that make me a nightmare for people like you. If you stop hacking my computer now, that'll be the end of it. I will not look for you, I will not pursure you, but if you don't, I will look for you, I will find you, and I will hack you.")
-ENTER
 DELAY 1000
+STRING mshta vbscript:Execute("CreateObject(""SAPI.SpVoice"").Speak(""I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money, but what I do have is a very particular set of skills. Skills that make me a nightmare for people like you. If you stop hacking my computer now, that'll be the end of it. I will not look for you, I will not pursue you, but if you don't, I will look for you, I will find you, and I will hack you."")(window.close)")
+ENTER
+DELAY 15000
 STRING start chrome
 DELAY 1000
 ENTER
